@@ -15,10 +15,10 @@ public class Main {
         // 2. 회원 등록
         system.registerMember("20250101", "홍길동");
         system.registerMember("20250102", "조우진");
-
+        system.printAllMembers();
         //2.2 회원 삭제
         system.removeMember("20250102");
-
+        system.printAllMembers();
         // 3. 도서 대여
         system.lendBook("20250101", "B001");
 
@@ -34,7 +34,6 @@ public class Main {
 
         //도서 확인
         system.BorrowBook("B001");
-
 
         // 6. 연체 여부 확인
         System.out.println("=== 연체 내역 ===");

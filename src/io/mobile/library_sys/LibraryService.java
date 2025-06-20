@@ -93,7 +93,7 @@ public class LibraryService implements LibraryManager, ReadingRoomManager {
 
 
 
-//qr코드로 출입 관리
+//qr코드로 독서실 출입 관리
     private String extractMemberId(String qrCode) {
         return qrCode.replace("QR_", "");
     }
@@ -136,5 +136,20 @@ public class LibraryService implements LibraryManager, ReadingRoomManager {
             logs.forEach(System.out::println);
         }
     }
+    public void printAllMembers() {
+        if (members.isEmpty()) {
+            System.out.println("등록된 회원이 없습니다.");
+            return;
+        }
+
+        System.out.println("===== 전체 회원 목록 =====");
+        for (Member member : members.values()) {
+            System.out.println(member);  // toString() 자동 호출됨
+        }
+    }
+
 
 }
+
+
+
